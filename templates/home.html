@@ -28,15 +28,12 @@
                 Nulla ut diam non leo euismod vehicula a eu ante. Vivamus quis lectus pulvinar, molestie sapien ut,
                 condimentum tortor. Aliquam erat volutpat. Nunc consectetur odio ac velit euismod aliquet.
             </p>
-            <h2 class="text-center mt-2 mb-4">Open Position</h2>
-            <p>
+            <h2 class="text-center mt-2 mb-4">Job Openings</h2>
+            <div>
                 {% for job in jobs %}
-                    <div>
-                        <h4>{{job['title']}}</h4>
-                        <div>Location: {{job['location']}}</div>
-                    </div>
-                {$ endfor %}
-            </p>
+                    {% include  'jobitem.html' %}
+                {% endfor %}
+            </div>
             <div class="text-center">
                 <button class="btn btn-primary btn-lg">Contact Us</button>
                 <p class="mt-2 mb-4">Copyright 2023, Jovian</p>
